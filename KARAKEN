@@ -80,10 +80,36 @@
     </div>
 </section>
 
+<section>
 
-    <section>
     <div class="bg-purple-300 ">
-    <p class="text-xl text-blue-1000">Features</p>
+    <p class="text-4xl text-blue-1000 text-center">Our Features</p>
+</section>
+<section id="features" class="grid grid-cols-3 ">
+  <div class="feature-square">
+    <!-- Feature 1 content -->
+    <a href="#" class="text-black text-decoration-none text-2xl ">Feature 1</a>
+    <h3 class="text-lg font-semibold mb-2">Feature </h3>
+    <p class="text-gray-600">Description of feature 1 goes here.</p>
+  </div>
+
+  <div class="feature-square">
+    <!-- Feature 2 content -->
+    <a href="#" class="text-black text-decoration-none text-2xl ">Feature 2</a>
+    <h3 class="text-lg font-semibold mb-2">Feature </h3>
+    <p class="text-gray-600">Description of feature 2 goes here.</p>
+  </div>
+
+  <div class="feature-square">
+    <!-- Feature 2 content -->
+    <a href="#" class="text-black text-decoration-none text-2xl">Feature 3</a>
+    <h3 class="text-lg font-semibold mb-2">Feature </h3>
+    <p class="text-gray-600">Description of feature 2 goes here.</p>
+  </div>
+
+  <!-- Repeat for the other squares -->
+</section>
+
     <a href="#" class="text-2xl text-blue-1000"></a>
 </body>
 <script>
