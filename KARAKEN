@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            opacity: 0;
+            animation: sparkle 1s infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .body::before,
+        .body::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 20%, #0c002c 40%, #4c556a 60%,rgb(32, 26, 59), #21103d 80%, #1b073b);
+        }
+
+        .body::after {
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        }
+    </style>
+    <title>KARAKEN; no code,Web_Builder</title>
+    
+</head>
+<body>
+<section class="body">
+    <div class="cons bg-gray-800 text-white fixed top-0 w-full z-10">
+        <nav class="bg-gray-700 flex">
+            <a href="#" class="hover:bg-purple-700 text-white text-decoration-none py-3 px-4 rounded">Home</a>
+            <a href="#" class="hover:bg-purple-700 text-white text-decoration-none py-3 px-4 rounded">About</a>
+            <a href="#" class="hover:bg-purple-700 text-white text-decoration-none py-3 px-4 rounded">Services</a>
+            <a href="#" class="hover:bg-purple-700 text-white text-decoration-none py-3 px-4 rounded">Portfolio</a>
+            <a href="#" class="hover:bg-purple-700 text-white text-decoration-none py-3 px-4 rounded">Contact</a>
+                    <div class="ml-auto flex items-center">
+            <button class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Sign Up
+            </button>
+
+            <br><br>
+
+            <button class="hover:bg-green-500 text-white font-bold py-2 px-4 rounded ml-2">
+                Log in
+            </button>
+        </div>
+    </nav>
+</div>
+    <div class="text-center">
+        <header class="text-6xl font-bold pt-5 pb-2">KARAKEN</header>
+        <p class="text-xl">Ai powered,<br>No code: Web_Builder</p>
+    </div>
+</section>
+
+
+    <section>
+    <div class="bg-purple-300 ">
+    <p class="text-xl text-blue-1000">Features</p>
+    <a href="#" class="text-2xl text-blue-1000"></a>
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const starsContainer = document.querySelector('body');
+
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = Math.random() * window.innerWidth + 'px';
+                star.style.top = Math.random() * window.innerHeight + 'px';
+                star.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+</html>
